@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="261.0" prefWidth="344.0" style="-fx-background-color: #C9B18B;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="title" layoutX="116.0" layoutY="53.0" prefHeight="38.0" prefWidth="116.0" text="Simple Chat" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="112.0" AnchorPane.topAnchor="53.0">
@@ -16,5 +15,6 @@
       <Button fx:id="create_btn" layoutX="97.0" layoutY="193.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Create Room" />
       <TextField fx:id="name_txtfld" layoutX="97.0" layoutY="140.0" AnchorPane.bottomAnchor="95.4" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="97.4" />
       <Label layoutX="36.0" layoutY="144.0" text="Nickname: " AnchorPane.bottomAnchor="99.4" AnchorPane.leftAnchor="36.0" />
+      <Label layoutX="110.0" layoutY="113.0" text="Username not available" textFill="RED" visible="false" />
    </children>
 </AnchorPane>

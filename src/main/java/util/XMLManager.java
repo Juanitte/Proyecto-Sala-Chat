@@ -95,4 +95,18 @@ public class XMLManager {
 		}
 		return result;
 	}
+
+
+	public static String extractTimestampFromXML(String xmlMessage) {
+		return "";
+	}
+
+	public static String extractContentFromXML(String xmlMessage) {
+		return "";
+	}
+
+	public static String extractSenderFromXML(String xmlMessage) {
+		return "";
+	}
+
 }

@@ -83,6 +83,8 @@ public class ChatServer {
                 out.println("You are now in room: " + room);
                 broadcastToRoom(room, "User " + nickname + " has joined the room.");
 
+                System.out.println("User " + nickname + " has joined the room " + room + ".");
+
                 String message;
                 while ((message = in.readLine()) != null) {
                     if ("/quit".equals(message)) {
@@ -105,6 +107,7 @@ public class ChatServer {
                         leaveRoom(room);
                     }
                     broadcast(nickname + " has left the chat.");
+                    System.out.println(nickname + " has left the chat.");
                 }
                 try {
                     socket.close();

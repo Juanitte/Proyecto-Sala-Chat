@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="Prueba socket">
+    <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="conexión funcionando">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +76,7 @@
       <workItem from="1695710164831" duration="58000" />
       <workItem from="1695710229366" duration="4237000" />
       <workItem from="1695722868887" duration="3522000" />
-      <workItem from="1695804206303" duration="309000" />
+      <workItem from="1695804206303" duration="992000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1695645041608</created>
@@ -116,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695726350837</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="conexión funcionando">
+      <created>1695804602284</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695804602284</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +141,7 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="Model" />
     <MESSAGE value="Prueba socket" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prueba socket" />
+    <MESSAGE value="conexión funcionando" />
+    <option name="LAST_COMMIT_MESSAGE" value="conexión funcionando" />
   </component>
 </project>

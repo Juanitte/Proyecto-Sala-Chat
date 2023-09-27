@@ -12,20 +12,17 @@ public class Message {
     private String message;
     private LocalDateTime timestamp;
     private User user;
-    private Chat chat;
 
     public Message() {
         this.message = "";
         this.timestamp = LocalDateTime.now();
         this.user = new User();
-        this.chat = new Chat();
     }
 
-    public Message(String message, LocalDateTime timestamp, User user, Chat chat) {
+    public Message(String message, LocalDateTime timestamp, User user) {
         this.message = message;
         this.timestamp = timestamp;
         this.user = user;
-        this.chat = chat;
     }
 
     public String getMessage() {
@@ -52,24 +49,16 @@ public class Message {
         this.user = user;
     }
 
-    public Chat getChat() {
-        return chat;
-    }
-
-    public void setChat(Chat chat) {
-        this.chat = chat;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Message message = (Message) o;
-        return Objects.equals(timestamp, message.timestamp) && Objects.equals(user, message.user) && Objects.equals(chat, message.chat);
+        Message message1 = (Message) o;
+        return Objects.equals(message, message1.message) && Objects.equals(timestamp, message1.timestamp) && Objects.equals(user, message1.user);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(timestamp, user, chat);
+        return Objects.hash(message, timestamp, user);
     }
 }

@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="conexión funcionando">
+    <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="modified model and xmlmanager">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/juanite/controller/ChatRoomController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/juanite/util/AppData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/juanite/chatRoom.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/controller/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/controller/NavigationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/XMLManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/util/XMLManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/juanite/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/juanite/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/juanite/navigation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/juanite/navigation.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +58,7 @@
     "git-widget-placeholder": "JHL",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-20",
-    "last_opened_file_path": "C:/Users/juan1/IdeaProjects/ProyectoSalaChat/src/main/java/com/juanite/connection",
+    "last_opened_file_path": "C:/Users/juan1/IdeaProjects/ProyectoSalaChat/src/main/resources/com/juanite",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,9 +72,16 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\juan1\IdeaProjects\ProyectoSalaChat\src\main\resources\com\juanite" />
       <recent name="C:\Users\juan1\IdeaProjects\ProyectoSalaChat\src\main\java\com\juanite\connection" />
       <recent name="C:\Users\juan1\IdeaProjects\ProyectoSalaChat\src\main\java\util" />
       <recent name="C:\Users\juan1\IdeaProjects\ProyectoSalaChat\src\main\java\com\juanite" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.juanite" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.juanite.controller" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -76,7 +97,10 @@
       <workItem from="1695710164831" duration="58000" />
       <workItem from="1695710229366" duration="4237000" />
       <workItem from="1695722868887" duration="3522000" />
-      <workItem from="1695804206303" duration="992000" />
+      <workItem from="1695804206303" duration="2145000" />
+      <workItem from="1695898712700" duration="390000" />
+      <workItem from="1695918618881" duration="7706000" />
+      <workItem from="1695970866423" duration="2836000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1695645041608</created>
@@ -120,7 +144,21 @@
       <option name="project" value="LOCAL" />
       <updated>1695804602284</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="conexión funcionando">
+      <created>1695805321659</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695805321659</updated>
+    </task>
+    <task id="LOCAL-00008" summary="modified model and xmlmanager">
+      <created>1695806244757</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695806244757</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +180,7 @@
     <MESSAGE value="Model" />
     <MESSAGE value="Prueba socket" />
     <MESSAGE value="conexión funcionando" />
-    <option name="LAST_COMMIT_MESSAGE" value="conexión funcionando" />
+    <MESSAGE value="modified model and xmlmanager" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified model and xmlmanager" />
   </component>
 </project>

@@ -1,6 +1,6 @@
-package util;
+package com.juanite.util;
 
-import com.juanite.model.domain.Chat;
+import com.juanite.model.domain.Room;
 import com.juanite.model.domain.Message;
 import com.juanite.model.domain.User;
 
@@ -35,7 +35,7 @@ public class XMLManager {
 			e.printStackTrace();
 		} catch (FileNotFoundException e) {
 			try {
-				File file = new File(c.getClass().getName()+".xml");
+				File file = new File(fichero);
 				file.createNewFile();
 				writeXML(c, fichero);
 			} catch (IOException ex) {
@@ -45,15 +45,15 @@ public class XMLManager {
 		return result;
 	}
 	
-	public static Chat readChatXML(String fichero) {
-		Chat result = null;
+	public static Room readChatXML(String fichero) {
+		Room result = null;
 		
 		JAXBContext context = null;
 		try {
 			context = JAXBContext.newInstance(result.getClass());
 
 			Unmarshaller m = context.createUnmarshaller();
-			result = (Chat)m.unmarshal(new File(fichero));
+			result = (Room)m.unmarshal(new File(fichero));
 
 		} catch (JAXBException e) {
 			// TODO Auto-generated catch block

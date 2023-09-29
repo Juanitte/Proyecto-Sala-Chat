@@ -2,19 +2,22 @@ package com.juanite.model.domain;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 import java.util.Objects;
 
 @XmlRootElement(name="Chat")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Chat {
+public class Room implements Serializable {
+    @XmlElement(name="name")
     private String  name;
 
-    public Chat() {
+    public Room() {
         this.name = "";
     }
 
-    public Chat(String name) {
+    public Room(String name) {
         this.name = name;
     }
 
@@ -31,8 +34,8 @@ public class Chat {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Chat chat = (Chat) o;
-        return Objects.equals(name, chat.name);
+        Room room = (Room) o;
+        return Objects.equals(name, room.name);
     }
 
     @Override

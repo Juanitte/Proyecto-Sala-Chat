@@ -10,13 +10,28 @@ import javafx.scene.control.TextField;
 
 public class HomeController {
 
-    public Label title;
+    @FXML
     public Button getIn_btn;
+    @FXML
     public Button create_btn;
-    public TextField name_txtfld;
+    @FXML
+    public TextField txtfld_name;
+    @FXML
+    public Label lbl_userError;
+    @FXML
+    public TextField txtfld_roomName;
+    @FXML
+    public Label lbl_roomError;
 
     @FXML
-    private void switchToNavigation() throws IOException {
+    private void enter() throws IOException {
+        App.setWindowSize(350, 497);
+        App.setRoot("navigation");
+    }
+
+    @FXML
+    private void createRoom() throws IOException {
+        App.setWindowSize(350, 497);
         App.setRoot("navigation");
     }
 }

@@ -18,8 +18,14 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        ChatClient cc = new ChatClient();
-        cc.start(stage);
+        scene = new Scene(loadFXML("home"), 358, 261);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void setWindowSize(double w, double h) {
+        scene.getWindow().setWidth(w);
+        scene.getWindow().setHeight(h);
     }
 
     public static void setRoot(String fxml) throws IOException {

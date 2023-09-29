@@ -1,7 +1,5 @@
 package com.juanite.controller;
 
-import java.io.IOException;
-
 import com.juanite.App;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -9,7 +7,9 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
-public class NavigationController {
+import java.io.IOException;
+
+public class ChatRoomController {
 
     @FXML
     public VBox vbx_roomList;

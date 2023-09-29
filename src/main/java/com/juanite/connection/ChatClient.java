@@ -1,32 +1,22 @@
 package com.juanite.connection;
 
+import com.juanite.model.domain.Message;
+import com.juanite.util.AppData;
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.time.LocalDateTime;
 
 public class ChatClient extends Application {
     private static final String SERVER_ADDRESS = "172.16.16.115";
     private static final int SERVER_PORT = 8080;
-    private PrintWriter out;
-    private BufferedReader in;
-    private String nickname;
-    private String room;
-
-    private TextArea chatArea;
-    private TextField messageField;
+    private ObjectOutputStream out;
+    private ObjectInputStream in;
 
     public static void main(String[] args) {
         launch(args);
@@ -34,47 +24,26 @@ public class ChatClient extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Chat Client");
-
-        BorderPane root = new BorderPane();
-        chatArea = new TextArea();
-        chatArea.setEditable(false);
-        root.setCenter(chatArea);
-
-        VBox inputBox = new VBox();
-        inputBox.setSpacing(5);
-        messageField = new TextField();
-        messageField.setPromptText("Escribe tu mensaje");
-        Button sendButton = new Button("Enviar");
-        inputBox.getChildren().addAll(messageField, sendButton);
-        root.setBottom(inputBox);
-
-        Scene scene = new Scene(root, 400, 300);
-        primaryStage.setScene(scene);
-        primaryStage.show();
 
         connectToServer();
 
-        sendButton.setOnAction(e -> sendMessage());
-
-        primaryStage.setOnCloseRequest(e -> disconnectFromServer());
+        primaryStage.setOnCloseRequest(e -> {
+            try {
+                disconnectFromServer();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
     }
 
     private void connectToServer() {
         try {
             Socket socket = new Socket(SERVER_ADDRESS, SERVER_PORT);
-            out = new PrintWriter(socket.getOutputStream(), true);
-            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            out = new ObjectOutputStream(socket.getOutputStream());
+            in = new ObjectInputStream(socket.getInputStream());
 
             // Solicitar al cliente un apodo (nickname)
-            TextInputDialog dialog = new TextInputDialog();
-            dialog.setTitle("Nickname");
-            dialog.setHeaderText(null);
-            dialog.setContentText("Ingrese su nickname:");
-            dialog.showAndWait().ifPresent(name -> {
-                nickname = name;
-                out.println(nickname);
-            });
+
 
             // Inicialmente, unirse a una sala
             joinRoom();
@@ -89,24 +58,26 @@ public class ChatClient extends Application {
         dialog.setHeaderText(null);
         dialog.setContentText("Ingrese el nombre de la sala:");
         dialog.showAndWait().ifPresent(roomName -> {
-            room = roomName;
-            out.println("/join " + roomName);
+            //room = roomName;
+            try {
+                out.flush();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         });
     }
 
-    private void sendMessage() {
-        String message = messageField.getText();
-        if (!message.isEmpty()) {
-            out.println(message);
-            appendMessage("Yo: " + message);
-            messageField.clear();
+    private void sendMessage() throws IOException {
+        String msg = ""; //messageField.getText();
+        if (!msg.isEmpty()) {
+            Message message = new Message(msg, LocalDateTime.now(), AppData.getCurrentUser(), AppData.getCurrentRoom());
+            out.writeObject(message);
+            out.flush();
+            //messageField.clear();
         }
     }
 
-    private void disconnectFromServer() {
-        if (out != null) {
-            out.println("/quit");
-        }
+    private void disconnectFromServer() throws IOException {
         if (in != null) {
             try {
                 in.close();
@@ -120,6 +91,6 @@ public class ChatClient extends Application {
     }
 
     private void appendMessage(String message) {
-        Platform.runLater(() -> chatArea.appendText(message + "\n"));
+        //Platform.runLater(() -> chatArea.appendText(message + "\n"));
     }
 }

@@ -24,6 +24,11 @@ public class HomeController {
     public Label lbl_roomError;
 
     @FXML
+    public void initialize() {
+
+    }
+
+    @FXML
     private void enter() throws IOException {
         App.setWindowSize(350, 497);
         App.setRoot("navigation");

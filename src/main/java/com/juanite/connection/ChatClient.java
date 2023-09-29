@@ -2,9 +2,7 @@ package com.juanite.connection;
 
 import com.juanite.model.domain.Message;
 import com.juanite.util.AppData;
-import javafx.application.Application;
 import javafx.scene.control.TextInputDialog;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -12,29 +10,16 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.time.LocalDateTime;
 
-public class ChatClient extends Application {
+public class ChatClient {
     private static final String SERVER_ADDRESS = "172.16.16.115";
     private static final int SERVER_PORT = 8080;
     private ObjectOutputStream out;
     private ObjectInputStream in;
 
-    public static void main(String[] args) {
-        launch(args);
+    public ChatClient() {
+
     }
 
-    @Override
-    public void start(Stage primaryStage) {
-
-        connectToServer();
-
-        primaryStage.setOnCloseRequest(e -> {
-            try {
-                disconnectFromServer();
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-        });
-    }
 
     private void connectToServer() {
         try {

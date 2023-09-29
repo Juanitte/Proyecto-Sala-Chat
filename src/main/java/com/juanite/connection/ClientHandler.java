@@ -55,6 +55,9 @@ public class ClientHandler implements Runnable {
         this.room = room;
     }
 
+    public ClientHandler() {
+
+    }
     public ClientHandler(Socket socket) {
         this.socket = socket;
     }

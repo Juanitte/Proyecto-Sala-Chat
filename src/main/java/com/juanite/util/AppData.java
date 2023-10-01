@@ -14,7 +14,6 @@ public class AppData {
     private static Room currentRoom;
     private static Message currentMessage;
     private static ChatClient cc = new ChatClient();
-    private static ClientHandler ch = new ClientHandler();
 
     public static User getCurrentUser() {
         return currentUser;
@@ -39,4 +38,13 @@ public class AppData {
     public static void setCurrentMessage(Message currentMessage) {
         AppData.currentMessage = currentMessage;
     }
+
+    public static ChatClient getCc() {
+        return cc;
+    }
+
+    public static void setCc(ChatClient cc) {
+        AppData.cc = cc;
+    }
+
 }

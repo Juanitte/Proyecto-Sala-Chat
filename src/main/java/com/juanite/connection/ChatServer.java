@@ -1,5 +1,9 @@
 package com.juanite.connection;
 
+import com.juanite.model.domain.Message;
+import com.juanite.model.domain.Room;
+import com.juanite.model.domain.User;
+
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
@@ -14,42 +18,10 @@ public class ChatServer {
     private static final int PORT = 8080;
     private static final int MAX_CLIENTS = 100;
 
-    static Map<String, ObjectOutputStream> clients = new HashMap<>();
-    private static Map<String, String> clientRooms = new HashMap<>();
-    private static Map<String, Set<String>> rooms = new HashMap<>();
+    static Map<User, ObjectOutputStream> clients = new HashMap<>();
+    private static Map<User, Room> clientRooms = new HashMap<>();
+    private static Map<Room, Set<User>> rooms = new HashMap<>();
     private static ExecutorService pool = Executors.newFixedThreadPool(MAX_CLIENTS);
-
-    public static Map<String, ObjectOutputStream> getClients() {
-        return clients;
-    }
-
-    public static void setClients(Map<String, ObjectOutputStream> clients) {
-        ChatServer.clients = clients;
-    }
-
-    public static Map<String, String> getClientRooms() {
-        return clientRooms;
-    }
-
-    public static void setClientRooms(Map<String, String> clientRooms) {
-        ChatServer.clientRooms = clientRooms;
-    }
-
-    public static Map<String, Set<String>> getRooms() {
-        return rooms;
-    }
-
-    public static void setRooms(Map<String, Set<String>> rooms) {
-        ChatServer.rooms = rooms;
-    }
-
-    public static ExecutorService getPool() {
-        return pool;
-    }
-
-    public static void setPool(ExecutorService pool) {
-        ChatServer.pool = pool;
-    }
 
     public static void main(String[] args) {
         System.out.println("Chat Server is running...");
@@ -63,26 +35,35 @@ public class ChatServer {
         }
     }
 
-    static void broadcast(String message) throws IOException {
+    static void broadcast(Message message) throws IOException {
         synchronized (clients) {
             for (ObjectOutputStream client : clients.values()) {
+                client.writeObject(message);
                 client.flush();
             }
         }
     }
 
-    static void broadcastToRoom(String room, String message) throws IOException {
+    static void broadcastToRoom(Room room, Message message) throws IOException {
         synchronized (rooms) {
-            Set<String> roomMembers = rooms.get(room);
+            Set<User> roomMembers = rooms.get(room);
             if (roomMembers != null) {
-                for (String member : roomMembers) {
+                for (User member : roomMembers) {
                     ObjectOutputStream client = clients.get(member);
                     if (client != null) {
+                        client.writeObject(message);
                         client.flush();
                     }
                 }
             }
         }
-        System.out.println("Mensaje recibido: " + message);
+    }
+
+    static void updateRooms() {
+        synchronized (clients) {
+            for (ObjectOutputStream client : clients.values()) {
+
+            }
+        }
     }
 }

@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="modified model and xmlmanager">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/juanite/controller/ChatRoomController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/juanite/util/AppData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/juanite/chatRoom.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg_temp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rooms.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/controller/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/controller/NavigationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/XMLManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/util/XMLManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/juanite/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/juanite/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/juanite/navigation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/juanite/navigation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/util/AppData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/util/AppData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "JHL",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-20",
     "last_opened_file_path": "C:/Users/juan1/IdeaProjects/ProyectoSalaChat/src/main/resources/com/juanite",
@@ -84,6 +76,15 @@
       <recent name="com.juanite.controller" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.juanite.App" />
+      <module name="ProyectoSalaChat" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -101,6 +102,7 @@
       <workItem from="1695898712700" duration="390000" />
       <workItem from="1695918618881" duration="7706000" />
       <workItem from="1695970866423" duration="2836000" />
+      <workItem from="1696168375577" duration="8372000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1695645041608</created>

@@ -5,20 +5,26 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @XmlRootElement(name="Chat")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Room implements Serializable {
     @XmlElement(name="name")
     private String  name;
+    @XmlElement(name="users")
+    private Set<User> users;
 
     public Room() {
         this.name = "";
+        this.users = new HashSet<>();
     }
 
-    public Room(String name) {
+    public Room(String name, Set<User> users) {
         this.name = name;
+        this.users = users;
     }
 
     public String getName() {
@@ -29,6 +35,13 @@ public class Room implements Serializable {
         this.name = name;
     }
 
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
 
     @Override
     public boolean equals(Object o) {

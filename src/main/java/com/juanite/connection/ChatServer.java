@@ -19,9 +19,9 @@ public class ChatServer {
     private static final int MAX_CLIENTS = 100;
 
     static Map<User, ObjectOutputStream> clients = new HashMap<>();
-    private static Map<User, Room> clientRooms = new HashMap<>();
-    private static Map<Room, Set<User>> rooms = new HashMap<>();
-    private static ExecutorService pool = Executors.newFixedThreadPool(MAX_CLIENTS);
+    static Map<User, Room> clientRooms = new HashMap<>();
+    static Map<Room, Set<User>> rooms = new HashMap<>();
+    static ExecutorService pool = Executors.newFixedThreadPool(MAX_CLIENTS);
 
     public static void main(String[] args) {
         System.out.println("Chat Server is running...");
@@ -59,11 +59,4 @@ public class ChatServer {
         }
     }
 
-    static void updateRooms() {
-        synchronized (clients) {
-            for (ObjectOutputStream client : clients.values()) {
-
-            }
-        }
-    }
 }

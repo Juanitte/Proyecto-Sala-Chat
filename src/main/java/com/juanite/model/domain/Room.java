@@ -22,9 +22,9 @@ public class Room implements Serializable {
         this.users = new HashSet<>();
     }
 
-    public Room(String name, Set<User> users) {
+    public Room(String name) {
         this.name = name;
-        this.users = users;
+        this.users = new HashSet<>();
     }
 
     public String getName() {

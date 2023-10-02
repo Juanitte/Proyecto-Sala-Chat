@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="modified model and xmlmanager">
+    <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="Avanzando en la traduccion a Object Input/Output Stream">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg_temp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rooms.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java" afterDir="false" />
@@ -40,28 +39,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-20",
-    "last_opened_file_path": "C:/Users/juan1/IdeaProjects/ProyectoSalaChat/src/main/resources/com/juanite",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/juan1/IdeaProjects/ProyectoSalaChat/src/main/resources/com/juanite&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\juan1\IdeaProjects\ProyectoSalaChat\src\main\resources\com\juanite" />
@@ -102,7 +101,8 @@
       <workItem from="1695898712700" duration="390000" />
       <workItem from="1695918618881" duration="7706000" />
       <workItem from="1695970866423" duration="2836000" />
-      <workItem from="1696168375577" duration="8372000" />
+      <workItem from="1696168375577" duration="10028000" />
+      <workItem from="1696264646690" duration="6604000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1695645041608</created>
@@ -160,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695806244757</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Avanzando en la traduccion a Object Input/Output Stream">
+      <created>1696178756215</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696178756215</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +190,7 @@
     <MESSAGE value="Prueba socket" />
     <MESSAGE value="conexión funcionando" />
     <MESSAGE value="modified model and xmlmanager" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified model and xmlmanager" />
+    <MESSAGE value="Avanzando en la traduccion a Object Input/Output Stream" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avanzando en la traduccion a Object Input/Output Stream" />
   </component>
 </project>

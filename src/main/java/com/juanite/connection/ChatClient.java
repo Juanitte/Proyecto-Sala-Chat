@@ -4,7 +4,6 @@ import com.juanite.model.domain.Message;
 import com.juanite.model.domain.Room;
 import com.juanite.model.domain.User;
 import com.juanite.util.AppData;
-import javafx.scene.control.TextInputDialog;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -20,6 +19,22 @@ public class ChatClient {
     private static final int SERVER_PORT = 8080;
     private ObjectOutputStream out;
     private ObjectInputStream in;
+
+    public ObjectOutputStream getOut() {
+        return out;
+    }
+
+    public void setOut(ObjectOutputStream out) {
+        this.out = out;
+    }
+
+    public ObjectInputStream getIn() {
+        return in;
+    }
+
+    public void setIn(ObjectInputStream in) {
+        this.in = in;
+    }
 
     public ChatClient() {
         try {
@@ -42,8 +57,10 @@ public class ChatClient {
 
     }
 
-    public void sendMessage() throws IOException {
-
+    public void sendMessage(String messageContent) throws IOException {
+        Message message = new Message(messageContent, LocalDateTime.now(), AppData.getCurrentUser(), AppData.getCurrentRoom());
+        out.writeObject(message);
+        out.flush();
     }
 
     public void disconnectFromServer() throws IOException {

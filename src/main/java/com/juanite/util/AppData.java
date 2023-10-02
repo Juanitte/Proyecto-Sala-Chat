@@ -7,12 +7,15 @@ import com.juanite.model.domain.Message;
 import com.juanite.model.domain.User;
 
 import java.net.Socket;
+import java.util.Set;
 
 public class AppData {
 
     private static User currentUser;
     private static Room currentRoom;
     private static Message currentMessage;
+    private static Set<User> users;
+    private static Set<Room> rooms;
     private static ChatClient cc = new ChatClient();
 
     public static User getCurrentUser() {
@@ -47,4 +50,19 @@ public class AppData {
         AppData.cc = cc;
     }
 
+    public static Set<User> getUsers() {
+        return users;
+    }
+
+    public static void setUsers(Set<User> users) {
+        AppData.users = users;
+    }
+
+    public static Set<Room> getRooms() {
+        return rooms;
+    }
+
+    public static void setRooms(Set<Room> rooms) {
+        AppData.rooms = rooms;
+    }
 }

@@ -3,7 +3,6 @@ package com.juanite.connection;
 import com.juanite.model.domain.Message;
 import com.juanite.model.domain.Room;
 import com.juanite.model.domain.User;
-import com.juanite.util.AppData;
 
 import java.io.*;
 import java.net.Socket;
@@ -11,8 +10,7 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
-import static com.juanite.connection.ChatServer.broadcast;
-import static com.juanite.connection.ChatServer.clients;
+import static com.juanite.connection.ChatServer.*;
 
 public class ClientHandler implements Runnable {
     private Socket socket;
@@ -72,36 +70,59 @@ public class ClientHandler implements Runnable {
         try {
             out = new ObjectOutputStream(socket.getOutputStream());
             ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
-            user = (User) in.readObject();
 
-            synchronized (clients) {
-                while (clients.containsKey(user)) {
-                    out.writeObject(false);
+            //User Log in and Room creation
+            boolean isLogged;
+            do {
+                isLogged = false;
+                user = (User) in.readObject();
+
+                synchronized (clients) {
+                    while (clients.containsKey(user)) {
+                        out.writeObject(false);
+                        out.flush();
+                        user = (User) in.readObject();
+                    }
+                    out.writeObject(true);
                     out.flush();
-                    user = (User) in.readObject();
+                    clients.put(user, out);
+
+                    if ((boolean) in.readObject()) {
+
+                        room = (Room) in.readObject();
+                        synchronized (rooms) {
+                            if (rooms.containsKey(room)) {
+                                out.writeObject(false);
+                                out.flush();
+                            }else {
+                                out.writeObject(true);
+                                out.flush();
+                                rooms.put(room, new HashSet<>());
+                                rooms.get(room).add(user);
+                                isLogged = true;
+                            }
+                        }
+                    }else{
+                        isLogged = true;
+                    }
                 }
-                clients.put(user, out);
-            }
+            }while(!isLogged);
 
-            out.writeObject("Welcome, " + user.getUsername() + "!");
-            out.flush();
-            broadcast(new Message("User " + user.getUsername() + " has joined the chat.", LocalDateTime.now(), new User("Server"), new Room()));
+            //At this point the user is logged
+            //Room created if needed
 
-            // Leer y reenviar los mensajes del cliente
-            String message;
-            while ((message = (String) in.readObject()) != null) {
-                broadcast(new Message(user.getUsername() + ": " + message, LocalDateTime.now(), new User("Server"), new Room()));
+            //Start reading and sending messages
+            Message message;
+            while ((message = (Message) in.readObject()) != null) {
+                if (message.getRoom() != null) {
+                    broadcastToRoom(message.getRoom(), message);
+                }
             }
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         } finally {
             if (user != null) {
-                //removeClient(nickname);
-                try {
-                    broadcast(new Message(user.getUsername() + " has left the chat.", LocalDateTime.now(), new User("Server"), new Room()));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+                clients.remove(user);
             }
             try {
                 socket.close();
@@ -112,27 +133,27 @@ public class ClientHandler implements Runnable {
     }
 
     private void joinRoom(Room room) {
-        /*
-        synchronized (ChatServer.getRooms()) {
-            ChatServer.getClientRooms().put(user, room);
-            ChatServer.getRooms().computeIfAbsent(room, k -> new HashSet<>()).add(user);
+
+        synchronized (rooms) {
+            clientRooms.put(user, room);
+            rooms.computeIfAbsent(room, k -> new HashSet<>()).add(user);
         }
-         */
+
     }
 
     private void leaveRoom(Room room) {
-        /*
-        synchronized (ChatServer.getRooms()) {
-            Set<User> roomMembers = ChatServer.getRooms().get(room);
+
+        synchronized (rooms) {
+            Set<User> roomMembers = rooms.get(room);
             if (roomMembers != null) {
                 roomMembers.remove(user);
                 if (roomMembers.isEmpty()) {
-                    ChatServer.getRooms().remove(room);
+                    rooms.remove(room);
                 }
             }
-            ChatServer.getClientRooms().remove(user);
+            clientRooms.remove(user);
         }
 
-         */
+
     }
 }

@@ -57,6 +57,7 @@ public class ChatClient {
 
     }
 
+
     public void sendMessage(String messageContent) throws IOException {
         Message message = new Message(messageContent, LocalDateTime.now(), AppData.getCurrentUser(), AppData.getCurrentRoom());
         out.writeObject(message);

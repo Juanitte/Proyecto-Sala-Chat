@@ -125,16 +125,19 @@ public class ClientHandler implements Runnable {
                 out.flush();
             }
 
-            boolean isExiting = (boolean) in.readObject();
-            if(isExiting) {
-                clients.remove(user);
-            }else {
+            while(isLogged) {
+                boolean isExiting = (boolean) in.readObject();
+                if (isExiting) {
+                    clients.remove(user);
+                    isLogged = false;
+                } else {
 
-                //Start reading and sending messages
-                Message message;
-                while ((message = (Message) in.readObject()) != null) {
-                    if (message.getRoom() != null) {
-                        broadcastToRoom(message.getRoom(), message);
+                    //Start reading and sending messages
+                    Message message;
+                    while ((message = (Message) in.readObject()) != null) {
+                        if (message.getRoom() != null) {
+                            broadcastToRoom(message.getRoom(), message);
+                        }
                     }
                 }
             }

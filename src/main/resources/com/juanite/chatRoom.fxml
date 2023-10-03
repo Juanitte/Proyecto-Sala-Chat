@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -12,25 +11,14 @@
             <Font name="Agency FB" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="137.0" layoutY="52.0" text="Chat Rooms" AnchorPane.topAnchor="52.0">
+      <Label fx:id="lbl_roomName" layoutX="137.0" layoutY="52.0" text="Chat Rooms" AnchorPane.topAnchor="52.0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <VBox fx:id="vbx_roomList" layoutX="19.0" layoutY="120.0" prefHeight="353.0" prefWidth="311.0" style="-fx-background-color: #E9D1AB;" AnchorPane.bottomAnchor="23.399999999999977" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.80000000000001" AnchorPane.topAnchor="120.0">
-         <children>
-            <HBox fx:id="hbx_room" alignment="CENTER" prefHeight="60.0" prefWidth="311.0">
-               <children>
-                  <Label fx:id="lbl_roomName" prefHeight="18.0" prefWidth="124.0" text="Label">
-                     <HBox.margin>
-                        <Insets right="40.0" />
-                     </HBox.margin>
-                  </Label>
-                  <Button fx:id="btn_enter" mnemonicParsing="false" text="Enter" />
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-      <Button fx:id="btn_back" layoutX="155.0" layoutY="83.0" mnemonicParsing="false" onMouseClicked="#backToMainMenu" text="Back" AnchorPane.topAnchor="83.0" />
+      <Button fx:id="btn_back" layoutX="155.0" layoutY="83.0" mnemonicParsing="false" onMouseClicked="#backToRoomsMenu" text="Back" AnchorPane.topAnchor="83.0" />
+      <TextArea fx:id="txtarea_chatPanel" editable="false" layoutX="18.0" layoutY="124.0" prefHeight="311.0" prefWidth="314.0" />
+      <TextField fx:id="txtfld_msg" layoutX="18.0" layoutY="449.0" prefHeight="26.0" prefWidth="255.0" />
+      <Button fx:id="btn_send" layoutX="280.0" layoutY="449.0" mnemonicParsing="false" onMouseClicked="#sendMessage" prefHeight="26.0" prefWidth="51.0" text="Send" />
    </children>
 </AnchorPane>

@@ -13,9 +13,6 @@ public class AppData {
 
     private static User currentUser;
     private static Room currentRoom;
-    private static Message currentMessage;
-    private static Set<User> users;
-    private static Set<Room> rooms;
     private static ChatClient cc = new ChatClient();
 
     public static User getCurrentUser() {
@@ -34,35 +31,11 @@ public class AppData {
         AppData.currentRoom = currentRoom;
     }
 
-    public static Message getCurrentMessage() {
-        return currentMessage;
-    }
-
-    public static void setCurrentMessage(Message currentMessage) {
-        AppData.currentMessage = currentMessage;
-    }
-
     public static ChatClient getCc() {
         return cc;
     }
 
     public static void setCc(ChatClient cc) {
         AppData.cc = cc;
-    }
-
-    public static Set<User> getUsers() {
-        return users;
-    }
-
-    public static void setUsers(Set<User> users) {
-        AppData.users = users;
-    }
-
-    public static Set<Room> getRooms() {
-        return rooms;
-    }
-
-    public static void setRooms(Set<Room> rooms) {
-        AppData.rooms = rooms;
     }
 }

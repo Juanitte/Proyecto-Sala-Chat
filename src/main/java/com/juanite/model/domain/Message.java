@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 @XmlRootElement(name="Message")
@@ -14,20 +15,21 @@ public class Message implements Serializable {
     @XmlElement(name="message")
     private String message;
     @XmlElement(name="timestamp")
-    private LocalDateTime timestamp;
+    private String timestamp;
     @XmlElement(name="user")
     private User user;
     @XmlElement(name="room")
     private Room room;
 
     public Message() {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd  HH:mm:ss");
         this.message = "";
-        this.timestamp = LocalDateTime.now();
+        this.timestamp = LocalDateTime.now().format(dtf);
         this.user = new User();
         this.room = new Room();
     }
 
-    public Message(String message, LocalDateTime timestamp, User user, Room room) {
+    public Message(String message, String timestamp, User user, Room room) {
         this.message = message;
         this.timestamp = timestamp;
         this.user = user;
@@ -42,11 +44,11 @@ public class Message implements Serializable {
         this.message = message;
     }
 
-    public LocalDateTime getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(LocalDateTime timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 

@@ -125,11 +125,17 @@ public class ClientHandler implements Runnable {
                 out.flush();
             }
 
-            //Start reading and sending messages
-            Message message;
-            while ((message = (Message) in.readObject()) != null) {
-                if (message.getRoom() != null) {
-                    broadcastToRoom(message.getRoom(), message);
+            boolean isExiting = (boolean) in.readObject();
+            if(isExiting) {
+                clients.remove(user);
+            }else {
+
+                //Start reading and sending messages
+                Message message;
+                while ((message = (Message) in.readObject()) != null) {
+                    if (message.getRoom() != null) {
+                        broadcastToRoom(message.getRoom(), message);
+                    }
                 }
             }
         } catch (IOException | ClassNotFoundException e) {

@@ -49,6 +49,8 @@ public class NavigationController {
     }
     @FXML
     private void backToMainMenu() throws IOException {
+        AppData.getCc().getOut().writeObject(true);
+        AppData.getCc().getOut().flush();
         App.setWindowSize(358, 291);
         App.setRoot("home");
     }

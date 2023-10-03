@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="object input and output stream used" />
+    <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="Avanzando en la traduccion a Object Input/Output Stream">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rooms.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/controller/ChatRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/controller/ChatRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/controller/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/controller/NavigationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/util/XMLManager.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +47,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;JHL&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/juan1/IdeaProjects/ProyectoSalaChat/src/main/resources/com/juanite&quot;,
@@ -64,8 +73,36 @@
       <recent name="com.juanite" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.juanite" />
       <recent name="com.juanite.controller" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.juanite.App" />
+      <module name="ProyectoSalaChat" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChatServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.juanite.connection.ChatServer" />
+      <module name="ProyectoSalaChat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.juanite.connection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ChatServer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -84,9 +121,8 @@
       <workItem from="1695898712700" duration="390000" />
       <workItem from="1695918618881" duration="7706000" />
       <workItem from="1695970866423" duration="2836000" />
-      <workItem from="1696324996942" duration="156000" />
-      <workItem from="1696327545830" duration="4775000" />
-      <workItem from="1696332338267" duration="1105000" />
+      <workItem from="1696168375577" duration="10028000" />
+      <workItem from="1696264646690" duration="6604000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1695645041608</created>
@@ -144,49 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695806244757</updated>
     </task>
-    <task id="LOCAL-00009" summary="object input and output stream used">
-      <created>1696321152811</created>
+    <task id="LOCAL-00009" summary="Avanzando en la traduccion a Object Input/Output Stream">
+      <created>1696178756215</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1696321152811</updated>
+      <updated>1696178756215</updated>
     </task>
-    <task id="LOCAL-00010" summary="object input and output stream used">
-      <created>1696329024667</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1696329024667</updated>
-    </task>
-    <task id="LOCAL-00011" summary="object input and output stream used">
-      <created>1696329900414</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1696329900414</updated>
-    </task>
-    <task id="LOCAL-00012" summary="object input and output stream used">
-      <created>1696330094346</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1696330094346</updated>
-    </task>
-    <task id="LOCAL-00013" summary="object input and output stream used">
-      <created>1696330350061</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1696330350061</updated>
-    </task>
-    <task id="LOCAL-00014" summary="object input and output stream used">
-      <created>1696333391635</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1696333391635</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +210,7 @@
     <MESSAGE value="Prueba socket" />
     <MESSAGE value="conexión funcionando" />
     <MESSAGE value="modified model and xmlmanager" />
-    <MESSAGE value="object input and output stream used" />
-    <option name="LAST_COMMIT_MESSAGE" value="object input and output stream used" />
+    <MESSAGE value="Avanzando en la traduccion a Object Input/Output Stream" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avanzando en la traduccion a Object Input/Output Stream" />
   </component>
 </project>

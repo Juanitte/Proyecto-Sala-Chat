@@ -15,14 +15,14 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class NavigationController {
-
+    private Set<Room> roomSet = new HashSet<>();
     @FXML
     public VBox vbx_roomList;
     @FXML
     public Button btn_back;
 
     public void initialize() throws IOException, ClassNotFoundException {
-        Set<Room> roomSet = (HashSet<Room>) AppData.getCc().getIn().readObject();
+        roomSet = (HashSet<Room>) AppData.getCc().getIn().readObject();
         if(!roomSet.isEmpty()) {
             for (Room room : roomSet) {
                     HBox newHbox = new HBox();

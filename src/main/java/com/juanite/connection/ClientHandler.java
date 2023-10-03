@@ -112,50 +112,12 @@ public class ClientHandler implements Runnable {
                 //At this point the user is logged
                 //Room created if needed
 
-                //Send the rooms list to the client
+                boolean isLeaving;
+                do{
+                    isLeaving = false;
+                    //Send the rooms list to the client
 
-                Set<Room> roomSet = new HashSet<>();
-                if (!rooms.isEmpty()) {
-                    for (Room room : rooms.keySet()) {
-                        roomSet.add(room);
-                    }
-                    out.writeObject(roomSet);
-                    out.flush();
-                } else {
-                    out.writeObject(roomSet);
-                    out.flush();
-                }
-
-                //Checks if exiting or not
-
-                boolean isExiting = (boolean) in.readObject();
-                if (isExiting) {
-                    clients.remove(user);
-                    isLogged = false;
-                } else {
-
-                    //Join a room
-
-                    Room enteringRoom = (Room) in.readObject();
-                    User enteringUser = (User) in.readObject();
-                    clientRooms.put(enteringUser,enteringRoom);
-                    rooms.get(enteringRoom).add(enteringUser);
-
-                    //Start reading and sending messages
-                    Message message;
-                    while ((message = (Message) in.readObject()) != null) {
-                        if (message.getRoom() != null) {
-                            broadcastToRoom(message.getRoom(), message);
-                        }
-                    }
-
-                    //If null Message, removes the user from the room
-
-                    clientRooms.remove(enteringUser);
-                    rooms.get(enteringRoom).remove(enteringUser);
-
-                    //Get Rooms list again
-
+                    Set<Room> roomSet = new HashSet<>();
                     if (!rooms.isEmpty()) {
                         for (Room room : rooms.keySet()) {
                             roomSet.add(room);
@@ -166,7 +128,43 @@ public class ClientHandler implements Runnable {
                         out.writeObject(roomSet);
                         out.flush();
                     }
-                }
+
+                    //Checks if exiting or not
+
+                    boolean isExiting = (boolean) in.readObject();
+                    if (isExiting) {
+                        clients.remove(user);
+                        isLogged = false;
+                        isLeaving = true;
+                    } else {
+
+                        //Join a room
+
+                        Room enteringRoom = (Room) in.readObject();
+                        User enteringUser = (User) in.readObject();
+                        clientRooms.put(enteringUser, enteringRoom);
+                        rooms.get(enteringRoom).add(enteringUser);
+
+                        //Start reading and sending messages
+                        Message message;
+                        while ((message = (Message) in.readObject()) != null) {
+                            if (message.getRoom() != null) {
+                                broadcastToRoom(message.getRoom(), message);
+                            }
+                        }
+
+                        //If null Message, removes the user from the room
+
+                        clientRooms.remove(enteringUser);
+                        rooms.get(enteringRoom).remove(enteringUser);
+
+                        isLeaving = false;
+
+                        out.writeObject(null);
+                        out.flush();
+
+                    }
+                }while (!isLeaving);
             }while(!isLogged);
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -180,30 +178,5 @@ public class ClientHandler implements Runnable {
                 e.printStackTrace();
             }
         }
-    }
-
-    private void joinRoom(Room room) {
-
-        synchronized (rooms) {
-            clientRooms.put(user, room);
-            rooms.computeIfAbsent(room, k -> new HashSet<>()).add(user);
-        }
-
-    }
-
-    private void leaveRoom(Room room) {
-
-        synchronized (rooms) {
-            Set<User> roomMembers = rooms.get(room);
-            if (roomMembers != null) {
-                roomMembers.remove(user);
-                if (roomMembers.isEmpty()) {
-                    rooms.remove(room);
-                }
-            }
-            clientRooms.remove(user);
-        }
-
-
     }
 }

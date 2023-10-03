@@ -29,8 +29,6 @@ public class NavigationController {
                     newHbox.setPrefHeight(60);
                     Label newLabel = new Label(room.getName());
                     newLabel.setId("lbl_"+newLabel.getText());
-                    newLabel.setPrefWidth(124);
-                    newLabel.setPrefHeight(18);
                     Button newButton = new Button("Join");
                     newButton.setId("btn_"+newLabel.getText());
                     newButton.setOnMouseClicked(event -> {

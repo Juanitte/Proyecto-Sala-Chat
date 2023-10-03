@@ -36,7 +36,7 @@ public class ChatRoomController {
         AppData.getCc().getOut().writeObject(nullMsg);
 
         AppData.setCurrentRoom(null);
-        App.setWindowSize(358, 291);
+        App.setWindowSize(350, 497);
         App.setRoot("navigation");
     }
 

@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="object input and output stream used">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/controller/ChatRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/controller/ChatRoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/controller/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/controller/NavigationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/juanite/chatRoom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/juanite/chatRoom.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="object input and output stream used" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +86,7 @@
       <workItem from="1695970866423" duration="2836000" />
       <workItem from="1696324996942" duration="156000" />
       <workItem from="1696327545830" duration="4775000" />
-      <workItem from="1696332338267" duration="372000" />
+      <workItem from="1696332338267" duration="1105000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1695645041608</created>
@@ -185,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696330350061</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="object input and output stream used">
+      <created>1696333391635</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696333391635</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

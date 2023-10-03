@@ -148,8 +148,20 @@ public class ClientHandler implements Runnable {
                             broadcastToRoom(message.getRoom(), message);
                         }
                     }
+
                     clientRooms.remove(enteringUser);
                     rooms.get(enteringRoom).remove(enteringUser);
+
+                    if (!rooms.isEmpty()) {
+                        for (Room room : rooms.keySet()) {
+                            roomSet.add(room);
+                        }
+                        out.writeObject(roomSet);
+                        out.flush();
+                    } else {
+                        out.writeObject(roomSet);
+                        out.flush();
+                    }
                 }
             }while(!isLogged);
         } catch (IOException | ClassNotFoundException e) {

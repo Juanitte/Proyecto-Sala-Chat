@@ -6,7 +6,6 @@ import com.juanite.model.domain.User;
 
 import java.io.*;
 import java.net.Socket;
-import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -94,6 +93,7 @@ public class ClientHandler implements Runnable {
                             if (rooms.containsKey(room)) {
                                 out.writeObject(false);
                                 out.flush();
+                                clients.remove(user);
                             }else {
                                 out.writeObject(true);
                                 out.flush();

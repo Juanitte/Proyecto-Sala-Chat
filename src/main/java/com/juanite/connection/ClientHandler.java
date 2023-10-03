@@ -126,11 +126,21 @@ public class ClientHandler implements Runnable {
                     out.flush();
                 }
 
+                //Checks if exiting or not
+
                 boolean isExiting = (boolean) in.readObject();
                 if (isExiting) {
                     clients.remove(user);
                     isLogged = false;
                 } else {
+
+                    //Join a room
+
+                    Room enteringRoom = (Room) in.readObject();
+                    User enteringUser = (User) in.readObject();
+                    clientRooms.put(enteringUser,enteringRoom);
+                    rooms.get(enteringRoom).add(enteringUser);
+
                     //Start reading and sending messages
                     Message message;
                     while ((message = (Message) in.readObject()) != null) {
@@ -138,6 +148,8 @@ public class ClientHandler implements Runnable {
                             broadcastToRoom(message.getRoom(), message);
                         }
                     }
+                    clientRooms.remove(enteringUser);
+                    rooms.get(enteringRoom).remove(enteringUser);
                 }
             }while(!isLogged);
         } catch (IOException | ClassNotFoundException e) {

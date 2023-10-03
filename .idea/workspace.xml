@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="modified model and xmlmanager">
+    <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="object input and output stream used">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/controller/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/controller/NavigationController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +88,8 @@
       <workItem from="1695898712700" duration="390000" />
       <workItem from="1695918618881" duration="7706000" />
       <workItem from="1695970866423" duration="2836000" />
+      <workItem from="1696324996942" duration="156000" />
+      <workItem from="1696327545830" duration="1438000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1695645041608</created>
@@ -144,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695806244757</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="object input and output stream used">
+      <created>1696321152811</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696321152811</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +177,7 @@
     <MESSAGE value="Prueba socket" />
     <MESSAGE value="conexión funcionando" />
     <MESSAGE value="modified model and xmlmanager" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified model and xmlmanager" />
+    <MESSAGE value="object input and output stream used" />
+    <option name="LAST_COMMIT_MESSAGE" value="object input and output stream used" />
   </component>
 </project>

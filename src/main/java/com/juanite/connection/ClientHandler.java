@@ -73,65 +73,64 @@ public class ClientHandler implements Runnable {
             //User Log in and Room creation
             boolean isLogged;
             do {
-                isLogged = false;
-                user = (User) in.readObject();
+                do {
+                    isLogged = false;
+                    user = (User) in.readObject();
 
-                synchronized (clients) {
-                    while (clients.containsKey(user)) {
-                        out.writeObject(false);
-                        out.flush();
-                        user = (User) in.readObject();
-                    }
-                    out.writeObject(true);
-                    out.flush();
-                    clients.put(user, out);
-
-                    if ((boolean) in.readObject()) {
-
-                        room = (Room) in.readObject();
-                        synchronized (rooms) {
-                            if (rooms.containsKey(room)) {
-                                out.writeObject(false);
-                                out.flush();
-                                clients.remove(user);
-                            }else {
-                                out.writeObject(true);
-                                out.flush();
-                                rooms.put(room, new HashSet<>());
-                                rooms.get(room).add(user);
-                                isLogged = true;
-                            }
+                    synchronized (clients) {
+                        while (clients.containsKey(user)) {
+                            out.writeObject(false);
+                            out.flush();
+                            user = (User) in.readObject();
                         }
-                    }else{
-                        isLogged = true;
+                        out.writeObject(true);
+                        out.flush();
+                        clients.put(user, out);
+
+                        if ((boolean) in.readObject()) {
+
+                            room = (Room) in.readObject();
+                            synchronized (rooms) {
+                                if (rooms.containsKey(room)) {
+                                    out.writeObject(false);
+                                    out.flush();
+                                    clients.remove(user);
+                                } else {
+                                    out.writeObject(true);
+                                    out.flush();
+                                    rooms.put(room, new HashSet<>());
+                                    rooms.get(room).add(user);
+                                    isLogged = true;
+                                }
+                            }
+                        } else {
+                            isLogged = true;
+                        }
                     }
+                } while (!isLogged);
+
+                //At this point the user is logged
+                //Room created if needed
+
+                //Send the rooms list to the client
+
+                Set<Room> roomSet = new HashSet<>();
+                if (!rooms.isEmpty()) {
+                    for (Room room : rooms.keySet()) {
+                        roomSet.add(room);
+                    }
+                    out.writeObject(roomSet);
+                    out.flush();
+                } else {
+                    out.writeObject(roomSet);
+                    out.flush();
                 }
-            }while(!isLogged);
 
-            //At this point the user is logged
-            //Room created if needed
-
-            //Send the rooms list to the client
-
-            Set<Room> roomSet = new HashSet<>();
-            if(!rooms.isEmpty()) {
-                for (Room room : rooms.keySet()) {
-                    roomSet.add(room);
-                }
-                out.writeObject(roomSet);
-                out.flush();
-            }else{
-                out.writeObject(roomSet);
-                out.flush();
-            }
-
-            while(isLogged) {
                 boolean isExiting = (boolean) in.readObject();
                 if (isExiting) {
                     clients.remove(user);
                     isLogged = false;
                 } else {
-
                     //Start reading and sending messages
                     Message message;
                     while ((message = (Message) in.readObject()) != null) {
@@ -140,7 +139,7 @@ public class ClientHandler implements Runnable {
                         }
                     }
                 }
-            }
+            }while(!isLogged);
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         } finally {

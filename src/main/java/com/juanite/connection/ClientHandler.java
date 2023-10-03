@@ -111,6 +111,20 @@ public class ClientHandler implements Runnable {
             //At this point the user is logged
             //Room created if needed
 
+            //Send the rooms list to the client
+
+            Set<Room> roomSet = new HashSet<>();
+            if(!rooms.isEmpty()) {
+                for (Room room : rooms.keySet()) {
+                    roomSet.add(room);
+                }
+                out.writeObject(roomSet);
+                out.flush();
+            }else{
+                out.writeObject(roomSet);
+                out.flush();
+            }
+
             //Start reading and sending messages
             Message message;
             while ((message = (Message) in.readObject()) != null) {

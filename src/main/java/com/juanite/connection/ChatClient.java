@@ -16,7 +16,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class ChatClient {
-    private static final String SERVER_ADDRESS = "172.16.16.115";
+    private static final String SERVER_ADDRESS = "192.168.1.175";
     private static final int SERVER_PORT = 8080;
     private ObjectOutputStream out;
     private ObjectInputStream in;

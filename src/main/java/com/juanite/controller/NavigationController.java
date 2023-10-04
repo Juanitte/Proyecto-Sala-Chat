@@ -25,23 +25,36 @@ public class NavigationController {
         roomSet = (HashSet<Room>) AppData.getCc().getIn().readObject();
         if(!roomSet.isEmpty()) {
             for (Room room : roomSet) {
-                    HBox newHbox = new HBox();
-                    newHbox.setPrefHeight(60);
-                    Label newLabel = new Label(room.getName());
-                    newLabel.setId("lbl_"+newLabel.getText());
-                    Button newButton = new Button("Join");
-                    newButton.setId("btn_"+newLabel.getText());
-                    newButton.setOnMouseClicked(event -> {
-                        try {
-                            joinRoom(newLabel);
-                        } catch (IOException e) {
-                            throw new RuntimeException(e);
-                        }
-                    });
-                    newHbox.getChildren().add(newLabel);
-                    newHbox.getChildren().add(newButton);
-                    vbx_roomList.getChildren().add(newHbox);
-                }
+                HBox newHbox = new HBox();
+                newHbox.setPrefHeight(60);
+                newHbox.setSpacing(10);
+
+
+                Label newLabel = new Label(room.getName());
+                newLabel.setId("lbl_" + newLabel.getText());
+                newLabel.setStyle("-fx-font-size: 18px;");
+
+                Button newButton = new Button("Join");
+                newButton.setId("btn_" + newLabel.getText());
+                newButton.setStyle(
+                        "-fx-background-color: #009900; " +
+                                "-fx-text-fill: white; " +
+                                "-fx-font-size: 16px; " +
+                                "-fx-pref-width: 80px;"
+                );
+
+                newButton.setOnMouseClicked(event -> {
+                    try {
+                        joinRoom(newLabel);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+
+                newHbox.getChildren().addAll(newLabel, newButton);
+                vbx_roomList.getChildren().add(newHbox);
+
+            }
         }
     }
 
@@ -59,7 +72,7 @@ public class NavigationController {
 
         AppData.setCurrentRoom(room);
 
-
+        App.setWindowSize(365, 530);
         App.setRoot("chatRoom");
     }
     @FXML

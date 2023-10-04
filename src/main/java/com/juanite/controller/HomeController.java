@@ -11,6 +11,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 public class HomeController {
 
@@ -26,6 +29,9 @@ public class HomeController {
     public TextField txtfld_roomName;
     @FXML
     public Label lbl_roomError;
+
+    @FXML
+    private AnchorPane anchorPane;
 
     @FXML
     public void initialize() {

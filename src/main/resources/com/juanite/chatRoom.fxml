@@ -4,21 +4,39 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="350.0" style="-fx-background-color: #C9B18B;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.juanite.controller.ChatRoomController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="350.0" style="-fx-background-color: #F0ECE2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.juanite.controller.ChatRoomController">
    <children>
-      <Label layoutX="119.0" layoutY="14.0" text="Simple Chat" AnchorPane.topAnchor="14.0">
+      <Label layoutX="14.0" layoutY="14.0" text="Simple Chat">
          <font>
-            <Font name="Agency FB" size="30.0" />
+            <Font name="Arial" size="36.0" />
          </font>
+         <style>
+            -fx-text-fill: #333333; /* Cambia el color del texto */
+         </style>
       </Label>
-      <Label fx:id="lbl_roomName" layoutX="137.0" layoutY="52.0" text="Chat Rooms" AnchorPane.topAnchor="52.0">
+      <Label fx:id="lbl_roomName" layoutX="14.0" layoutY="64.0" text="Chat Rooms">
          <font>
-            <Font size="14.0" />
+            <Font size="18.0" />
          </font>
+         <style>
+            -fx-text-fill: #0066CC; /* Cambia el color del texto */
+         </style>
       </Label>
-      <Button fx:id="btn_back" layoutX="155.0" layoutY="83.0" mnemonicParsing="false" onMouseClicked="#backToRoomsMenu" text="Back" AnchorPane.topAnchor="83.0" />
-      <TextArea fx:id="txtarea_chatPanel" editable="false" layoutX="18.0" layoutY="124.0" prefHeight="311.0" prefWidth="314.0" />
-      <TextField fx:id="txtfld_msg" layoutX="18.0" layoutY="449.0" prefHeight="26.0" prefWidth="255.0" />
-      <Button fx:id="btn_send" layoutX="280.0" layoutY="449.0" mnemonicParsing="false" onMouseClicked="#sendMessage" prefHeight="26.0" prefWidth="51.0" text="Send" />
+      <Button fx:id="btn_back" layoutX="14.0" layoutY="444.0" mnemonicParsing="false" onAction="#backToRoomsMenu" text="Back">
+         <style>
+            -fx-background-color: #0066CC; /* Cambia el color de fondo */
+            -fx-text-fill: white; /* Cambia el color del texto */
+            -fx-font-size: 16px; /* Cambia el tamaño de fuente */
+         </style>
+      </Button>
+      <TextArea fx:id="txtarea_chatPanel" editable="false" layoutX="14.0" layoutY="104.0" prefHeight="287.0" prefWidth="322.0" />
+      <TextField fx:id="txtfld_msg" layoutX="14.0" layoutY="405.0" prefHeight="26.0" prefWidth="322.0" />
+      <Button fx:id="btn_send" layoutX="274.0" layoutY="444.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="26.0" prefWidth="62.0" text="Send">
+         <style>
+            -fx-background-color: #009900; /* Cambia el color de fondo */
+            -fx-text-fill: white; /* Cambia el color del texto */
+            -fx-font-size: 16px; /* Cambia el tamaño de fuente */
+         </style>
+      </Button>
    </children>
 </AnchorPane>

@@ -7,16 +7,13 @@ import java.util.Set;
 
 public class Room implements Serializable {
     private String  name;
-    private Set<User> users;
 
     public Room() {
         this.name = "";
-        this.users = new HashSet<>();
     }
 
     public Room(String name) {
         this.name = name;
-        this.users = new HashSet<>();
     }
 
     public String getName() {
@@ -25,14 +22,6 @@ public class Room implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Set<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(Set<User> users) {
-        this.users = users;
     }
 
     @Override

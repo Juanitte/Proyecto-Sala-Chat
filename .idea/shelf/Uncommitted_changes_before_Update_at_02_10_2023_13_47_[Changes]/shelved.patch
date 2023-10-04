@@ -1,0 +1,131 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_20\" default=\"true\" project-jdk-name=\"openjdk-20\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"jpab\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 71ee1e33cc511abc723b15f6fac000027c9a9ae6)
++++ b/.idea/misc.xml	(date 1695977098722)
+@@ -8,7 +8,7 @@
+       </list>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+   <component name="ProjectType">
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"a4cec657-fa94-4ba3-8c1f-479f775a46a5\" name=\"Changes\" comment=\"modified model and xmlmanager\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/juanite/controller/ChatRoomController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/juanite/util/AppData.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/com/juanite/chatRoom.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/juanite/App.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/juanite/App.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatClient.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatClient.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatServer.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatServer.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/juanite/controller/HomeController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/juanite/controller/HomeController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/juanite/controller/NavigationController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/juanite/controller/NavigationController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Chat.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Room.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Message.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Message.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/juanite/model/domain/User.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/juanite/model/domain/User.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/util/XMLManager.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/juanite/util/XMLManager.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com/juanite/home.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com/juanite/home.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com/juanite/navigation.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com/juanite/navigation.fxml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2Vt936LdOKtNpLTkXNLklkjBdlS\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"git-widget-placeholder\": \"JHL\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"jdk.selected.JAVA_MODULE\": \"openjdk-20\",\r\n    \"last_opened_file_path\": \"C:/Users/juan1/IdeaProjects/ProyectoSalaChat/src/main/resources/com/juanite\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Libraries\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\juan1\\IdeaProjects\\ProyectoSalaChat\\src\\main\\resources\\com\\juanite\" />\r\n      <recent name=\"C:\\Users\\juan1\\IdeaProjects\\ProyectoSalaChat\\src\\main\\java\\com\\juanite\\connection\" />\r\n      <recent name=\"C:\\Users\\juan1\\IdeaProjects\\ProyectoSalaChat\\src\\main\\java\\util\" />\r\n      <recent name=\"C:\\Users\\juan1\\IdeaProjects\\ProyectoSalaChat\\src\\main\\java\\com\\juanite\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"com.juanite\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"com.juanite.controller\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"a4cec657-fa94-4ba3-8c1f-479f775a46a5\" name=\"Changes\" comment=\"\" />\r\n      <created>1695644309365</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1695644309365</updated>\r\n      <workItem from=\"1695644310930\" duration=\"2120000\" />\r\n      <workItem from=\"1695710119990\" duration=\"37000\" />\r\n      <workItem from=\"1695710164831\" duration=\"58000\" />\r\n      <workItem from=\"1695710229366\" duration=\"4237000\" />\r\n      <workItem from=\"1695722868887\" duration=\"3522000\" />\r\n      <workItem from=\"1695804206303\" duration=\"2145000\" />\r\n      <workItem from=\"1695898712700\" duration=\"390000\" />\r\n      <workItem from=\"1695918618881\" duration=\"7706000\" />\r\n      <workItem from=\"1695970866423\" duration=\"2836000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"First commit\">\r\n      <created>1695645041608</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695645041608</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"First commit\">\r\n      <created>1695646121466</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695646121466</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"First commit\">\r\n      <created>1695646229435</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695646229435</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Model\">\r\n      <created>1695713868056</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695713868056</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Prueba socket\">\r\n      <created>1695726350837</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695726350837</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"conexión funcionando\">\r\n      <created>1695804602284</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695804602284</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"conexión funcionando\">\r\n      <created>1695805321659</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695805321659</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"modified model and xmlmanager\">\r\n      <created>1695806244757</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695806244757</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"9\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"First commit\" />\r\n    <MESSAGE value=\"Model\" />\r\n    <MESSAGE value=\"Prueba socket\" />\r\n    <MESSAGE value=\"conexión funcionando\" />\r\n    <MESSAGE value=\"modified model and xmlmanager\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"modified model and xmlmanager\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 71ee1e33cc511abc723b15f6fac000027c9a9ae6)
++++ b/.idea/workspace.xml	(date 1695977530582)
+@@ -4,23 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="modified model and xmlmanager">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ClientHandler.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/juanite/controller/ChatRoomController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/juanite/util/AppData.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/juanite/chatRoom.fxml" afterDir="false" />
++    <list default="true" id="a4cec657-fa94-4ba3-8c1f-479f775a46a5" name="Changes" comment="conexión funcionando">
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/App.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatClient.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/connection/ChatServer.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/controller/HomeController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/controller/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/controller/NavigationController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Room.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/Message.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/model/domain/User.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/util/XMLManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juanite/util/XMLManager.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/juanite/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/juanite/home.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/juanite/navigation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/juanite/navigation.fxml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -55,10 +41,10 @@
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+     "WebServerToolWindowFactoryState": "false",
+-    "git-widget-placeholder": "JHL",
++    "git-widget-placeholder": "master",
+     "ignore.virus.scanning.warn.message": "true",
+     "jdk.selected.JAVA_MODULE": "openjdk-20",
+-    "last_opened_file_path": "C:/Users/juan1/IdeaProjects/ProyectoSalaChat/src/main/resources/com/juanite",
++    "last_opened_file_path": "C:/Users/juan1/IdeaProjects/ProyectoSalaChat/src/main/java/com/juanite/connection",
+     "node.js.detected.package.eslint": "true",
+     "node.js.detected.package.tslint": "true",
+     "node.js.selected.package.eslint": "(autodetect)",
+@@ -72,17 +58,10 @@
+ }]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\juan1\IdeaProjects\ProyectoSalaChat\src\main\resources\com\juanite" />
+       <recent name="C:\Users\juan1\IdeaProjects\ProyectoSalaChat\src\main\java\com\juanite\connection" />
+       <recent name="C:\Users\juan1\IdeaProjects\ProyectoSalaChat\src\main\java\util" />
+       <recent name="C:\Users\juan1\IdeaProjects\ProyectoSalaChat\src\main\java\com\juanite" />
+     </key>
+-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+-      <recent name="com.juanite" />
+-    </key>
+-    <key name="CopyClassDialog.RECENTS_KEY">
+-      <recent name="com.juanite.controller" />
+-    </key>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -97,10 +76,7 @@
+       <workItem from="1695710164831" duration="58000" />
+       <workItem from="1695710229366" duration="4237000" />
+       <workItem from="1695722868887" duration="3522000" />
+-      <workItem from="1695804206303" duration="2145000" />
+-      <workItem from="1695898712700" duration="390000" />
+-      <workItem from="1695918618881" duration="7706000" />
+-      <workItem from="1695970866423" duration="2836000" />
++      <workItem from="1695804206303" duration="992000" />
+     </task>
+     <task id="LOCAL-00001" summary="First commit">
+       <created>1695645041608</created>
+@@ -144,21 +120,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1695804602284</updated>
+     </task>
+-    <task id="LOCAL-00007" summary="conexión funcionando">
+-      <created>1695805321659</created>
+-      <option name="number" value="00007" />
+-      <option name="presentableId" value="LOCAL-00007" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1695805321659</updated>
+-    </task>
+-    <task id="LOCAL-00008" summary="modified model and xmlmanager">
+-      <created>1695806244757</created>
+-      <option name="number" value="00008" />
+-      <option name="presentableId" value="LOCAL-00008" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1695806244757</updated>
+-    </task>
+-    <option name="localTasksCounter" value="9" />
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -180,7 +142,6 @@
+     <MESSAGE value="Model" />
+     <MESSAGE value="Prueba socket" />
+     <MESSAGE value="conexión funcionando" />
+-    <MESSAGE value="modified model and xmlmanager" />
+-    <option name="LAST_COMMIT_MESSAGE" value="modified model and xmlmanager" />
++    <option name="LAST_COMMIT_MESSAGE" value="conexión funcionando" />
+   </component>
+ </project>
+\ No newline at end of file

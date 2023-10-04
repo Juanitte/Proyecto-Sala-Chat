@@ -1,24 +1,14 @@
 package com.juanite.model.domain;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
-@XmlRootElement(name="Message")
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Message implements Serializable {
-    @XmlElement(name="message")
     private String message;
-    @XmlElement(name="timestamp")
     private String timestamp;
-    @XmlElement(name="user")
     private User user;
-    @XmlElement(name="room")
     private Room room;
 
     public Message() {

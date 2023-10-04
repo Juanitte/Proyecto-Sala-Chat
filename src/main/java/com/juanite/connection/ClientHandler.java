@@ -153,7 +153,7 @@ public class ClientHandler implements Runnable {
                             }
                         }
 
-                        //If null Message, removes the user from the room
+                        //If null Message, removes the user from the room.
 
                         clientRooms.remove(enteringUser);
                         rooms.get(enteringRoom).remove(enteringUser);
